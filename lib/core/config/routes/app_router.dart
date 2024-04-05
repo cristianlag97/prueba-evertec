@@ -2,6 +2,12 @@ part of core.routes;
 
 final router = GoRouter(
   routes: [
+    //! Login
+    GoRoute(
+      path: PAGES.login.screenPath,
+      name: PAGES.login.screenName,
+      builder: (context, state) => const LoginScreen(),
+    ),
     //! Splash
     GoRoute(
       path: PAGES.splash.screenPath,
@@ -13,11 +19,6 @@ final router = GoRouter(
     //   path: PAGES.home.screenPath,
     //   name: PAGES.home.screenName,
     //   builder: (context, state) => const HomeScreen(),
-    // ),
-    // GoRoute(
-    //   path: PAGES.login.screenPath,
-    //   name: PAGES.login.screenName,
-    //   builder: (context, state) => const LoginScreen(),
     // ),
   ],
   errorBuilder: (context, state) => const NotFoundScreen(),
