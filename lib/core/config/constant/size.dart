@@ -36,6 +36,9 @@ const EdgeInsets paddingHorizontal4 = EdgeInsets.symmetric(horizontal: 4);
 const EdgeInsets paddingHorizontal8 = EdgeInsets.symmetric(horizontal: 8);
 const EdgeInsets paddingHorizontal12 = EdgeInsets.symmetric(horizontal: 12);
 const EdgeInsets paddingHorizontal16 = EdgeInsets.symmetric(horizontal: 16);
+const EdgeInsets paddingHorizontal18 = EdgeInsets.symmetric(horizontal: 18);
+const EdgeInsets paddingHorizontal20 = EdgeInsets.symmetric(horizontal: 20);
+const EdgeInsets paddingHorizontal24 = EdgeInsets.symmetric(horizontal: 24);
 
 //* EdgeInsets py - Espaciado vertical */
 const EdgeInsets paddingVertical4 = EdgeInsets.symmetric(vertical: 4);

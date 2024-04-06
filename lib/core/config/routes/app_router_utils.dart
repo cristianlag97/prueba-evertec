@@ -14,8 +14,6 @@ extension AppPageExtension on PAGES {
     switch (this) {
       case PAGES.splash:
         return '/splash';
-      // case PAGES.login:
-      //   return '/login';
       case PAGES.region:
         return '/region';
       case PAGES.details:
@@ -23,6 +21,7 @@ extension AppPageExtension on PAGES {
       case PAGES.error:
         return '/error';
       case PAGES.home:
+        return '/home';
       case PAGES.login:
       default:
         return '/';
