@@ -5,10 +5,12 @@ class ContainerBackground extends StatelessWidget {
     super.key,
     required this.child,
     required this.color,
+    this.isRequired = false,
   });
 
   final Widget child;
   final Color color;
+  final bool isRequired;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class ContainerBackground extends StatelessWidget {
     return Container(
       width: size.width,
       height: size.height,
-      decoration: BoxDecoration(color: color),
+      decoration: BoxDecoration(color: isRequired ? color : null),
       child: child,
     );
   }

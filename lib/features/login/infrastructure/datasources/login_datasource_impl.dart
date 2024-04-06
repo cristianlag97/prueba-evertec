@@ -15,15 +15,11 @@ class LoginDatasourceImpl extends LoginDatasource {
   }) async {
     try {
       Map<String, dynamic> data = await _readUserDataFromFile();
-      print('$data');
-      print('$document, $documentType, $password');
-      print(
-          '${data['document'] == document && data['documentType'] == documentType && data['password'] == password}');
 
       if (data['document'] == document &&
           data['documentType'] == documentType &&
           data['password'] == password) {
-        router.push(PAGES.splash.screenPath);
+        router.pushReplacement(PAGES.home.screenPath);
 
         return AuthResult(
             success: true,
@@ -58,7 +54,7 @@ class LoginDatasourceImpl extends LoginDatasource {
     File file = await _getLocalFile();
     await file.writeAsString(newUserJson);
 
-    router.push(PAGES.splash.screenPath);
+    router.pushReplacement(PAGES.home.screenPath);
     return User(
       document: document,
       documentType: documentType,
@@ -69,7 +65,6 @@ class LoginDatasourceImpl extends LoginDatasource {
   Future<File> _getLocalFile() async {
     try {
       final directory = await getApplicationDocumentsDirectory();
-      print('${directory.path}');
       return File('${directory.path}/credentials.json');
     } catch (e) {
       print('Error: $e');
