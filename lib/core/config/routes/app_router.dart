@@ -20,6 +20,11 @@ final router = GoRouter(
       name: PAGES.home.screenName,
       builder: (context, state) => const HomeScreen(),
     ),
+    GoRoute(
+      path: PAGES.region.screenPath,
+      name: PAGES.region.screenName,
+      builder: (context, state) => const StatesScreen(),
+    ),
   ],
   errorBuilder: (context, state) => const NotFoundScreen(),
 );

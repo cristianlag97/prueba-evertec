@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:prueba_evertec/core/config/config.dart';
 import 'package:prueba_evertec/features/home/presentation/widgets/device_information_container_widget.dart';
@@ -21,7 +20,7 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
         backgroundColor: colorOrange,
-        onPressed: () {},
+        onPressed: () => router.push(PAGES.region.screenPath),
         child: const Icon(Icons.add, color: colorWhite),
       ),
     );

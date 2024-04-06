@@ -14,3 +14,4 @@ const Color colorDarkGray2 = Color(0XFF414041);
 const Color colorGraySwitch = Color(0XFF676667);
 
 const Color colorDarkMode = Color(0XFF1C1B1F);
+const Color colorsTextStates = Color(0XFF838382);
