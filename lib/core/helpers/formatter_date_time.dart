@@ -1,7 +1,7 @@
 import 'package:intl/intl.dart';
 
 String formatterDateTime(String value) {
-  if (value == '') return 'no hay registro';
+  if (value == '') return 'No hay registro';
   DateFormat inputFormat = DateFormat("d/M/yyyy HH:mm");
   DateTime dateTime = inputFormat.parse(value);
 

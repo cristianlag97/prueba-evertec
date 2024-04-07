@@ -20,6 +20,15 @@ class StatesScreen extends ConsumerWidget {
           style: textStyle.bodyLarge!.copyWith(fontSize: 22),
         ),
         centerTitle: false,
+        titleSpacing: 0,
+        forceMaterialTransparency: true,
+        shadowColor: Colors.grey,
+        shape: const Border(
+          bottom: BorderSide(
+            color: Colors.grey,
+            width: 1.0,
+          ),
+        ),
       ),
       body: ContainerBackground(
         color: colorWhite,
