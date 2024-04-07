@@ -1,10 +1,10 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:prueba_evertec/core/config/config.dart';
-import 'package:prueba_evertec/features/home/presentation/widgets/device_information_container_widget.dart';
-import 'package:prueba_evertec/features/home/presentation/widgets/information_container_widget.dart';
-import 'package:prueba_evertec/features/home/presentation/widgets/switch_theme.dart';
-import 'package:prueba_evertec/shared/shared.dart';
+import 'package:evertec/core/config/config.dart';
+import 'package:evertec/shared/shared.dart';
+
+import '../presentation.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -40,14 +40,17 @@ class _HomeView extends ConsumerWidget {
         Positioned(
           left: size.width * 0.1,
           top: -40,
-          child: Image.asset('assets/images/istockphoto.jpg'),
+          child:
+              FadeInRight(child: Image.asset('assets/images/istockphoto.jpg')),
         ),
         Positioned(
           top: size.height * 0.06,
           left: -(size.width * 0.02),
-          child: Image.asset(
-            'assets/images/coronavirus.png',
-            width: size.width * 0.4,
+          child: FadeIn(
+            child: Image.asset(
+              'assets/images/coronavirus.png',
+              width: size.width * 0.4,
+            ),
           ),
         ),
         Positioned(
@@ -64,21 +67,25 @@ class _HomeView extends ConsumerWidget {
         ),
         Positioned(
           bottom: 0,
-          child: ContainerInformation(
-            isDarkMode: isDarkMode,
+          child: FadeInUp(
+            child: ContainerInformation(
+              isDarkMode: isDarkMode,
+            ),
           ),
         ),
         Positioned(
           top: size.height * 0.33,
           left: (size.width - containerWidth) / 2,
-          child: DeviceIformationContainer(
-            isDarkMode: isDarkMode,
+          child: FadeInUp(
+            child: DeviceIformationContainer(
+              isDarkMode: isDarkMode,
+            ),
           ),
         ),
         Positioned(
           top: size.height * 0.48,
           right: size.width * 0.05,
-          child: const SwitchThemeApp(),
+          child: FadeInRight(child: const SwitchThemeApp()),
         ),
       ],
     );

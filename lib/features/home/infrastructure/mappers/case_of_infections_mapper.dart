@@ -1,5 +1,4 @@
-import 'package:prueba_evertec/features/home/domain/domain.dart';
-import 'package:prueba_evertec/features/home/infrastructure/models/case_of_infections_model.dart';
+part of feature.home.infrastructure;
 
 class CaseOfInfectionsMapper {
   static jsonToEntity(CaseOfInfectionsModel cases) => CaseOfInfectionsEntity(

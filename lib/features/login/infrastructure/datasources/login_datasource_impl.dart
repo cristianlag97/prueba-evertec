@@ -1,10 +1,4 @@
-import 'dart:convert';
-import 'dart:io';
-
-import 'package:prueba_evertec/core/config/config.dart';
-import 'package:path_provider/path_provider.dart';
-
-import '../../domain/domain.dart';
+part of features.login.infraestructure;
 
 class LoginDatasourceImpl extends LoginDatasource {
   @override
@@ -51,7 +45,7 @@ class LoginDatasourceImpl extends LoginDatasource {
     };
 
     String newUserJson = json.encode(newUser);
-    File file = await _getLocalFile();
+    File file = await PathProviderPlugin.getLocalFile();
     await file.writeAsString(newUserJson);
 
     router.pushReplacement(PAGES.home.screenPath);
@@ -62,18 +56,8 @@ class LoginDatasourceImpl extends LoginDatasource {
     );
   }
 
-  Future<File> _getLocalFile() async {
-    try {
-      final directory = await getApplicationDocumentsDirectory();
-      return File('${directory.path}/credentials.json');
-    } catch (e) {
-      print('Error: $e');
-      throw Exception();
-    }
-  }
-
   Future<Map<String, dynamic>> _readUserDataFromFile() async {
-    File file = await _getLocalFile();
+    File file = await PathProviderPlugin.getLocalFile();
     String contents = await file.readAsString();
     return json.decode(contents);
   }

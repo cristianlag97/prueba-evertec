@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:prueba_evertec/core/config/config.dart';
+part of features.home.presentation.widgets;
 
 class SwitchThemeApp extends ConsumerWidget {
   const SwitchThemeApp({super.key});

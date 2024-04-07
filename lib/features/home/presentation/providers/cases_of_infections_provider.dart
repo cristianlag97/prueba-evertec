@@ -1,6 +1,4 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:prueba_evertec/features/home/infrastructure/datasource/home_datasource_impl.dart';
-import 'package:prueba_evertec/features/home/infrastructure/repositories/home_repository_impl.dart';
+part of feature.home.presentation.providers;
 
 final homeRepositoryProvider =
     Provider((ref) => HomeRepositoryImpl(HomeDatasourceImpl()));

@@ -1,5 +1,4 @@
-import '../../domain/entities/states_info_entity.dart';
-import '../models/states_info_model.dart';
+part of features.states.infrastructure;
 
 class StatesInfoMapper {
   static List<StatesInfoEntity> jsonToListEntity(

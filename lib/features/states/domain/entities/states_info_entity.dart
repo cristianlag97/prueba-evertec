@@ -1,3 +1,5 @@
+part of features.states.domain;
+
 class StatesInfoEntity {
   final String state;
   final String name;

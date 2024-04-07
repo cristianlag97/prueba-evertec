@@ -1,4 +1,4 @@
-import 'package:prueba_evertec/features/login/domain/domain.dart';
+part of features.login.infraestructure;
 
 class LoginREpositoryImpl extends LoginRepository {
   final LoginDatasource loginDatasource;

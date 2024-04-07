@@ -1,11 +1,4 @@
-import 'dart:convert';
-
-import 'package:prueba_evertec/core/config/config.dart';
-import 'package:prueba_evertec/core/plugins/dio_plugin.dart';
-import 'package:prueba_evertec/features/home/domain/domain.dart';
-
-import '../mappers/case_of_infections_mapper.dart';
-import '../models/case_of_infections_model.dart';
+part of feature.home.infrastructure;
 
 class HomeDatasourceImpl extends HomeDatasource {
   @override

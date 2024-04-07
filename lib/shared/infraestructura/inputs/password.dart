@@ -1,4 +1,4 @@
-import 'package:formz/formz.dart';
+part of shared.infrastructure.inputs;
 
 // Define input validation errors
 enum PasswordError {

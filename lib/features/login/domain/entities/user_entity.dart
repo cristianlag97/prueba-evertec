@@ -1,3 +1,5 @@
+part of features.login.domain;
+
 class User {
   final String document;
   final String documentType;

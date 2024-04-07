@@ -1,4 +1,4 @@
-part of features.login.presentation;
+part of features.login.presentation.widgets;
 
 class SocialMediaButton extends StatelessWidget {
   const SocialMediaButton({

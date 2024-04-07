@@ -1,5 +1,4 @@
-import 'package:prueba_evertec/features/states/domain/entities/states_current_entity.dart';
-import 'package:prueba_evertec/features/states/infrastructure/models/states_current_model.dart';
+part of features.states.infrastructure;
 
 class StatesCurrentMapper {
   static List<StatesCurrentEntity> jsonToEntity(

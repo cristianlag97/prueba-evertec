@@ -9,12 +9,6 @@ final router = GoRouter(
       name: PAGES.login.screenName,
       builder: (context, state) => const LoginScreen(),
     ),
-    //! Splash
-    GoRoute(
-      path: PAGES.splash.screenPath,
-      name: PAGES.splash.screenName,
-      builder: (context, state) => const SplashScreen(),
-    ),
     //! Home
     GoRoute(
       path: PAGES.home.screenPath,

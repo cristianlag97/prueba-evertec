@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:prueba_evertec/core/config/config.dart';
+import 'package:evertec/core/config/config.dart';
 
 class AppTheme {
   final bool isDarkMode;

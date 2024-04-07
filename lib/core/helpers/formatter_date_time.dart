@@ -1,4 +1,4 @@
-import 'package:intl/intl.dart';
+part of core.helpers;
 
 String formatterDateTime(String value) {
   if (value == '') return 'No hay registro';
