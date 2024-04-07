@@ -1,4 +1,4 @@
-import 'package:formz/formz.dart';
+part of shared.infrastructure.inputs;
 
 enum DocumentError { empty, less, more }
 

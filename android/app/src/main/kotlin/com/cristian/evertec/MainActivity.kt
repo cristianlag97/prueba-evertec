@@ -1,4 +1,4 @@
-package com.example.prueba_evertec
+package com.cristian.evertec
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,3 +1,5 @@
+part of feature.home.domain;
+
 class CaseOfInfectionsEntity {
   final int positive;
   final int negative;

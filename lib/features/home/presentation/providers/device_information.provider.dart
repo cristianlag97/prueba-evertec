@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:prueba_evertec/core/plugins/plugins.dart';
+part of feature.home.presentation.providers;
 
 final deviceInfoProvider =
     FutureProvider.family<Map<String, dynamic>, BuildContext>(

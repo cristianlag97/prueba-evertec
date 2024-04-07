@@ -1,1 +1,3 @@
-export 'presentation/screens/home_screen.dart';
+export 'presentation/presentation.dart';
+export 'domain/domain.dart';
+export 'infrastructure/infrastructure.dart';

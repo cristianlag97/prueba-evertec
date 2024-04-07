@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:prueba_evertec/core/config/config.dart';
-import 'package:prueba_evertec/shared/shared.dart';
-import '../providers/states_provider.dart';
-import '../widgets/build_item.dart';
+part of features.states.presentation.screens;
 
 class StatesScreen extends ConsumerWidget {
   const StatesScreen({super.key});
@@ -36,26 +31,46 @@ class StatesScreen extends ConsumerWidget {
           data: (data) {
             return statesCurrentsAsync.when(
               data: (currentStateData) {
-                return ListView.builder(
-                  itemCount: data.length,
-                  itemBuilder: (context, index) {
-                    final infoData = data[index];
-                    final currentData = currentStateData[index];
+                return FadeInUp(
+                  child: ListView.builder(
+                    itemCount: data.length,
+                    itemBuilder: (context, index) {
+                      final infoData = data[index];
+                      final currentData = currentStateData[index];
 
-                    return BuildItem(
-                      info: infoData,
-                      current: currentData,
-                    );
-                  },
+                      return BuildItem(
+                        info: infoData,
+                        current: currentData,
+                      );
+                    },
+                  ),
                 );
               },
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(
+                child: Spin(
+                  infinite: true,
+                  duration: const Duration(seconds: 1),
+                  child: Image.asset(
+                    'assets/images/loading.png',
+                    width: 100,
+                  ),
+                ),
+              ),
               error: (error, stackTrace) => Center(
                 child: Text('Error: $error'),
               ),
             );
           },
-          loading: () => const Center(child: CircularProgressIndicator()),
+          loading: () => Center(
+            child: Spin(
+              infinite: true,
+              duration: const Duration(seconds: 1),
+              child: Image.asset(
+                'assets/images/loading.png',
+                width: 100,
+              ),
+            ),
+          ),
           error: (error, stackTrace) => Center(
             child: Text('Error: $error'),
           ),

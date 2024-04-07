@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/config/config.dart';
-import '../../../../core/helpers/formatter_date_time.dart';
-import '../../../../core/helpers/formatter_number.dart';
-import '../../domain/entities/states_current_entity.dart';
-import '../../domain/entities/states_info_entity.dart';
+import '../../../../core/core.dart';
+import '../../domain/domain.dart';
 
 class BuildItem extends ConsumerWidget {
   const BuildItem({

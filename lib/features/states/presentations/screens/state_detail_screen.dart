@@ -1,11 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:prueba_evertec/core/config/config.dart';
-import 'package:prueba_evertec/features/states/presentations/providers/states_provider.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:animate_do/animate_do.dart';
-
-import '../../../../shared/shared.dart';
+part of features.states.presentation.screens;
 
 class StateDetailScreen extends ConsumerWidget {
   const StateDetailScreen({
@@ -64,8 +57,15 @@ class StateDetailScreen extends ConsumerWidget {
           error: (error, stackTrace) => Center(
             child: Text('Error al obtener el detalle: $error'),
           ),
-          loading: () => const Center(
-            child: CircularProgressIndicator(),
+          loading: () => Center(
+            child: Spin(
+              infinite: true,
+              duration: const Duration(seconds: 1),
+              child: Image.asset(
+                'assets/images/loading.png',
+                width: 100,
+              ),
+            ),
           ),
         ),
       ),

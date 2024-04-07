@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:prueba_evertec/core/config/config.dart';
-import 'package:prueba_evertec/features/home/presentation/providers/device_information.provider.dart';
+part of features.home.presentation.widgets;
 
 class DeviceIformationContainer extends ConsumerWidget {
   const DeviceIformationContainer({super.key, required this.isDarkMode});
@@ -72,7 +69,16 @@ class DeviceIformationContainer extends ConsumerWidget {
           );
         },
         error: (error, stackTrace) => Center(child: Text('Error: $error')),
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => Center(
+          child: Spin(
+            infinite: true,
+            duration: const Duration(seconds: 1),
+            child: Image.asset(
+              'assets/images/loading.png',
+              width: 100,
+            ),
+          ),
+        ),
       ),
     );
   }

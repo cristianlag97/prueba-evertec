@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:prueba_evertec/core/config/config.dart';
-import 'package:prueba_evertec/core/config/constant/constant.dart';
-import 'package:prueba_evertec/core/helpers/formatter_number.dart';
-import 'package:prueba_evertec/features/home/presentation/providers/cases_of_infections_provider.dart';
+part of features.home.presentation.widgets;
 
 class ContainerInformation extends StatelessWidget {
   const ContainerInformation({super.key, required this.isDarkMode});
@@ -95,8 +90,15 @@ class _CasesOfInfectionsView extends ConsumerWidget {
       error: (error, stackTrace) => Center(
         child: Text('Error: $error'),
       ),
-      loading: () => const Center(
-        child: CircularProgressIndicator(),
+      loading: () => Center(
+        child: Spin(
+          infinite: true,
+          duration: const Duration(seconds: 1),
+          child: Image.asset(
+            'assets/images/loading.png',
+            width: 100,
+          ),
+        ),
       ),
     );
   }

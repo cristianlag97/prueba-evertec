@@ -1,4 +1,4 @@
-import 'package:intl/intl.dart';
+part of core.helpers;
 
 String formatterNumber(int number) {
   final formattedNumber = NumberFormat.decimalPattern().format(number);

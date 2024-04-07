@@ -1,3 +1,5 @@
+part of features.states.domain;
+
 class StatesCurrentEntity {
   final int totalTestResults;
   final int positive;

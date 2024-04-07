@@ -1,4 +1,4 @@
-import 'dart:convert';
+part of features.states.infrastructure;
 
 List<StatesCurrentModel> statesCurrentModelFromJson(String str) =>
     List<StatesCurrentModel>.from(

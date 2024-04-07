@@ -1,5 +1,4 @@
-import '../entities/states_current_entity.dart';
-import '../entities/states_info_entity.dart';
+part of features.states.domain;
 
 abstract class StatesRepository {
   Future<List<StatesInfoEntity>> getStateInfo();

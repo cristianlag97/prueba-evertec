@@ -1,4 +1,4 @@
-import '../entities/case_of_infections_entity.dart';
+part of feature.home.domain;
 
 abstract class HomeDatasource {
   Future<CaseOfInfectionsEntity> getCasesOfInfect();

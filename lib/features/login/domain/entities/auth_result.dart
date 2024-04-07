@@ -1,4 +1,4 @@
-import '../domain.dart';
+part of features.login.domain;
 
 class AuthResult {
   final bool success;

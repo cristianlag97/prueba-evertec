@@ -1,3 +1,8 @@
-export 'datasource/home_datasource.dart';
-export 'entities/case_of_infections_entity.dart';
-export 'repositories/home_repository.dart';
+library feature.home.domain;
+
+//datasource
+part 'datasource/home_datasource.dart';
+//entity
+part 'entities/case_of_infections_entity.dart';
+//repository
+part 'repositories/home_repository.dart';

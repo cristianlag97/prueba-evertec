@@ -1,4 +1,4 @@
-import 'package:prueba_evertec/features/home/domain/domain.dart';
+part of feature.home.infrastructure;
 
 class HomeRepositoryImpl extends HomeRepository {
   final HomeDatasource homeDatasource;

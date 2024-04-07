@@ -1,4 +1,10 @@
-part of features.login.presentation;
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../../../core/core.dart';
+import '../../../../shared/shared.dart';
+import '../../login.dart';
+import '../providers/login_form/login_form.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -35,6 +41,13 @@ class _LoginForm extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final List<String> documentTypes = [
+      'Selecciona una opción',
+      'Cédula de Ciudadanía (CC)',
+      'Tarjeta de Identidad (TI)',
+      'Cédula de Extranjería (CE)',
+      'Pasaporte',
+    ];
     final textStyle = Theme.of(context).textTheme;
     final loginForm = ref.watch(loginProvider);
     return Container(
@@ -43,14 +56,14 @@ class _LoginForm extends ConsumerWidget {
       child: Column(
         children: <Widget>[
           sizedBoxy20,
-          CustomInput(
-            label: 'Tipo Documento',
-            fontSize: 14,
-            initialValue: loginForm.documentType.value,
-            onChanged: ref.read(loginProvider.notifier).onDocumentTypeChanged,
+          CustomDropDown(
+            label: 'Tipo de documento',
+            initValue: loginForm.documentType.value,
+            documentTypes: documentTypes,
             errorMessage: loginForm.isFormPosted
                 ? loginForm.documentType.errorMessage
                 : null,
+            onChanged: ref.read(loginProvider.notifier).onDocumentTypeChanged,
           ),
           sizedBoxy12,
           CustomInput(
@@ -187,11 +200,12 @@ class _ImageTopLogin extends StatelessWidget {
             child: RichText(
               text: TextSpan(
                 text: 'Bienvenido a:\n',
-                style: textStyle.bodySmall!.copyWith(fontSize: 10),
+                style: textStyle.bodySmall!
+                    .copyWith(fontSize: 10, color: colorDarkGray2),
                 children: <TextSpan>[
                   TextSpan(
                     text: '   Evertec',
-                    style: textStyle.titleSmall!.copyWith(
+                    style: textStyle.titleMedium!.copyWith(
                         fontWeight: FontWeight.bold, color: colorDarkGray2),
                   ),
                 ],

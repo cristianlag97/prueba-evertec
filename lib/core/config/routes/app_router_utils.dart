@@ -1,7 +1,6 @@
 part of core.routes;
 
 enum PAGES {
-  splash,
   login,
   home,
   region,
@@ -12,8 +11,6 @@ enum PAGES {
 extension AppPageExtension on PAGES {
   String get screenPath {
     switch (this) {
-      case PAGES.splash:
-        return '/splash';
       case PAGES.region:
         return '/region';
       case PAGES.details:
@@ -30,8 +27,6 @@ extension AppPageExtension on PAGES {
 
   String get screenName {
     switch (this) {
-      case PAGES.splash:
-        return 'SPLASH';
       case PAGES.login:
         return 'LOGIN';
       case PAGES.region:

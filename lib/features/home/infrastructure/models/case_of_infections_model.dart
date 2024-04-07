@@ -1,4 +1,4 @@
-import 'dart:convert';
+part of feature.home.infrastructure;
 
 List<CaseOfInfectionsModel> currentCaseOfInfectionsFromJson(String str) =>
     List<CaseOfInfectionsModel>.from(

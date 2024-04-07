@@ -1,4 +1,4 @@
-import 'package:prueba_evertec/features/login/domain/domain.dart';
+part of features.login.domain;
 
 abstract class LoginDatasource {
   Future<AuthResult> loginUser({

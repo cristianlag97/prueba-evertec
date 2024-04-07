@@ -1,3 +1,5 @@
+part of features.login.infraestructure;
+
 class UserModel {
   final String document;
   final String documentType;

@@ -1,9 +1,9 @@
-import 'package:formz/formz.dart';
+part of shared.infrastructure.inputs;
 
 enum DocumentTypeError { empty, invalid }
 
 class DocumentType extends FormzInput<String, DocumentTypeError> {
-  const DocumentType.pure() : super.pure('');
+  const DocumentType.pure() : super.pure('Selecciona una opción');
   const DocumentType.dirty(String value) : super.dirty(value);
 
   String? get errorMessage {
@@ -32,11 +32,12 @@ class DocumentType extends FormzInput<String, DocumentTypeError> {
 
   bool _isValidTipoDocumento(String value) {
     final tiposValidos = [
-      'tarjeta de identidad',
-      'cedula',
-      'pasaporte',
-      'cedula de extranjeria'
+      'Selecciona una opción',
+      'Cédula de Ciudadanía (CC)',
+      'Tarjeta de Identidad (TI)',
+      'Cédula de Extranjería (CE)',
+      'Pasaporte',
     ];
-    return tiposValidos.contains(value.toLowerCase());
+    return tiposValidos.contains(value);
   }
 }

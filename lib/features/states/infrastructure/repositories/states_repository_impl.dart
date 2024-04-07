@@ -1,7 +1,4 @@
-import 'package:prueba_evertec/features/states/domain/datasource/states_datasource.dart';
-import 'package:prueba_evertec/features/states/domain/entities/states_current_entity.dart';
-import 'package:prueba_evertec/features/states/domain/entities/states_info_entity.dart';
-import 'package:prueba_evertec/features/states/domain/repositories/states_repository.dart';
+part of features.states.infrastructure;
 
 class StatesRepositoryImpl extends StatesRepository {
   final StatesDatasource statesDatasource;
