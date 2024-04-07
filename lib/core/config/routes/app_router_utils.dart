@@ -17,12 +17,12 @@ extension AppPageExtension on PAGES {
       case PAGES.region:
         return '/region';
       case PAGES.details:
-        return '/details';
+        return '/details/:stateId/:nameState';
       case PAGES.error:
         return '/error';
-      case PAGES.home:
-        return '/home';
       case PAGES.login:
+        return '/login';
+      case PAGES.home:
       default:
         return '/';
     }

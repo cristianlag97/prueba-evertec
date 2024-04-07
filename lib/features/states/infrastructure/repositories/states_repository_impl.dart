@@ -17,4 +17,9 @@ class StatesRepositoryImpl extends StatesRepository {
   Future<List<StatesInfoEntity>> getStateInfo() {
     return statesDatasource.getStateInfo();
   }
+
+  @override
+  Future<StatesInfoEntity> getDEtailOfstate(String state) {
+    return statesDatasource.getDEtailOfstate(state);
+  }
 }

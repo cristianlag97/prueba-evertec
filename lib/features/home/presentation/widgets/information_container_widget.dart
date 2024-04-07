@@ -32,7 +32,7 @@ class ContainerInformation extends StatelessWidget {
           const Text('Fecha recolección datos: dd.mm.yyy'),
           sizedBox12,
           const _CasesOfInfectionsView(),
-          sizedBox12,
+          sizedBox18,
           SizedBox(
             width: size.width * 0.9,
             child: Text(
